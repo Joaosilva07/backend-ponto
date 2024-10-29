@@ -1,0 +1,22 @@
+{
+  "name": "backend-ponto",
+  "version": "1.0.0",
+  "description": "back-end projeto ponto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joaosilva07/backend-ponto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joaosilva07/backend-ponto/issues"
+  },
+  "homepage": "https://github.com/Joaosilva07/backend-ponto#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
