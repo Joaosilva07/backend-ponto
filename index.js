@@ -15,11 +15,6 @@ sequelize.sync({alter: true}).then(() => {
 
 
 
-
-
-
-
-
 // routes
 
 app.get('/', (req, res) => {
