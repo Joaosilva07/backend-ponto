@@ -6,3 +6,8 @@ const sequelize = new Sequelize('ponto','postgres','ceub123456', {
     host: 'localhost',
     dialect: 'postgres'
 })
+
+module.exports = sequelize;
+
+
+

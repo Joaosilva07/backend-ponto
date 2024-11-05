@@ -18,6 +18,8 @@
   "homepage": "https://github.com/Joaosilva07/backend-ponto#readme",
   "dependencies": {
     "express": "^4.21.1",
+    "pg": "^8.13.1",
+    "pg-hstore": "^2.3.4",
     "sequelize": "^6.37.5",
     "sqlite3": "^5.1.7"
   }
