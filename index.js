@@ -21,3 +21,4 @@ app.get('/teste/:id', (req, res) => {
 app.post('/testepost', (req, res) => {
     res.send("deu certo, retornei algo com post")
 })
+
