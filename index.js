@@ -3,12 +3,22 @@ const app = express();
 const port = 3000;
 
 const sequelize = require('./config/db');
+const User = require('./config/models/user');
+const Ponto = require('./config/models/ponto');
 
-sequelize.authenticate().then(() => {
-    console.log("Conexão OK");
+sequelize.sync({alter: true}).then(() => {
+    console.log("BD sincrozinado");
 }).catch((error) => {
-    console.log("Error " + error);
+    console.log("Erro ao sincronizar" + error);
 });
+
+
+
+
+
+
+
+
 
 // routes
 

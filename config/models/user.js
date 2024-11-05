@@ -1,36 +1,35 @@
-const sequelize = require('./config/db');
-const {dataTypes} = require('sequelize');
+const sequelize = require('../db');
+const { DataTypes } = require('sequelize');
 
-//"user" model
+// "user" model
 
 const User = sequelize.define('user', {
-    id_user:{
-        type: dataTypes.INTEGER,
+    id_user: {
+        type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-
     nome: {
-        type: dataTypes.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     email: {
-        type: dataTypes.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     login: {
-        type: dataTypes.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     senha: {
-        type: dataTypes.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
-    permissao: {
-        type: dataTypes.ENUM('admin', 'user'),
+    nivel: {
+        type: DataTypes.ENUM('admin', 'user'),
         allowNull: false
     }
-},{
+}, {
     timestamps: true
 });
 
