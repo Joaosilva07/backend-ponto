@@ -12,27 +12,38 @@ sequelize.sync({alter: true}).then(() => {
     console.log("Erro ao sincronizar" + error);
 });
 
-
-
-
 // routes
 
-app.get('/', (req, res) => {
-    res.send("deu certo");
+// cadastrar usuario
+
+app.post('/user', async (req, res) => {
+   
 });
 
-app.get('/teste', (req, res) => {
-    res.send("deu certo, retornei algo");
+// buscar todos os usuarios
+app.get('/users', async (req, res) => {
+    const users = await User.findAll();
+    res.json(users);
+    
 });
 
-app.get('/teste/:id', (req, res) => {
-    res.send("deu certo, retornei algo com id");
+// buscar usuario por id
+app.get('/user/:id_usuario', async (req, res) => {
+    User.findAll({
+        where: {
+            id_user: req.params.id_usuario
+        }
+    }).then((user) => {
+        res.json(user);
+    });
 });
 
-app.post('/testepost', (req, res) => {
-    res.send("deu certo, retornei algo com post");
-});
+
+
+
+
+
 
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Servidor rodando em http://localhost:${port}`);
 });
